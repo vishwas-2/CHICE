@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Career Hub Institute</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-title">Career Hub Institute</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html" class="active">Registration</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Student Registration</h2>
+            <p class="section-subtitle">
+                Fill in the form below to register for your preferred course.
+            </p>
+
+            <!-- Success message placeholder (optional if you later switch to AJAX) -->
+            <div id="registration-message" class="form-message"></div>
+
+            <!-- Note: Replace the action URL with your actual PHP hosting URL -->
+            <form id="registrationForm"
+                  class="form"
+                  action="https://your-php-host.com/backend/register.php"
+                  method="POST"
+                  novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="full_name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="full_name" name="full_name" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_name">Father's Name <span class="required">*</span></label>
+                        <input type="text" id="father_name" name="father_name" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" maxlength="10" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="address">Full Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course <span class="required">*</span></label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="Basic Computer Application">Basic Computer Application</option>
+                            <option value="Basic Computer Application + Tally Prime">Basic Computer Application + Tally Prime</option>
+                            <option value="Diploma in Computer Application">Diploma in Computer Application</option>
+                            <option value="Tally Prime">Tally Prime</option>
+                            <option value="Programming Languages">Programming Languages</option>
+                            <option value="Advance Excel">Advance Excel</option>
+                        </select>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualification">Education / Qualification</label>
+                        <input type="text" id="qualification" name="qualification" placeholder="e.g. 12th Pass, B.Com, etc.">
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="batch_time">Preferred Batch Time</label>
+                        <select id="batch_time" name="batch_time">
+                            <option value="">Select Batch Time</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="Evening">Evening</option>
+                        </select>
+                        <small class="error"></small>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn primary-btn">Submit Registration</button>
+                    <button type="reset" class="btn outline-btn">Reset Form</button>
+                </div>
+
+                <p class="form-note">
+                    Fields marked with <span class="required">*</span> are mandatory.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Career Hub Institute of Computer Education. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
