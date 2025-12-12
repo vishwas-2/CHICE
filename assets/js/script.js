@@ -15,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
  * - Mobile: exactly 10 digits
  * - Email: basic format check if not empty
  */
+
+const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".main-nav");
+
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+
 function initRegistrationFormValidation() {
     const form = document.getElementById("registrationForm");
     if (!form) return;
