@@ -1,7 +1,122 @@
-const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
+<!DOCTYPE html>
+<html lang="en">
 
-    toggle.addEventListener("click", () => {
-        toggle.classList.toggle("active");
-        nav.classList.toggle("active");
-    });
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Hub Institute of Computer Education</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="CHICE Logo" class="logo-image">
+                <span class="logo-title">CHICE</span>
+            </a>
+
+            <div class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div>
+                <h1>Career Hub Institute of Computer Education</h1>
+                <p class="tagline">
+                    Providing quality, job-oriented computer education to build your digital future.
+                </p>
+                <a href="registration.html" class="btn primary-btn">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section-index" id="courses">
+        <div class="container">
+            <h2 class="section-title">Our Courses</h2>
+            <p class="section-subtitle">
+                Choose from our carefully designed courses to match your learning goals.
+            </p>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Basic Computer Application</h3>
+                    <p>
+                        Learn the fundamentals of computer operations, Windows, MS Word, Excel,
+                        PowerPoint, internet usage and basic typing skills for everyday tasks.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Basic Computer Application + Tally Prime</h3>
+                    <p>
+                        Gain essential computer skills along with practical training in Tally Prime
+                        for accounting, GST billing, ledgers, inventory and financial reports.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Diploma in Computer Application (DCA)</h3>
+                    <p>
+                        A comprehensive program covering office applications, basics of programming,
+                        internet, multimedia and introduction to databases for career-focused learners.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Tally Prime</h3>
+                    <p>
+                        Specialised course focusing on Tally Prime features including company creation,
+                        voucher entries, GST, payroll and business reporting.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Programming Languages</h3>
+                    <p>
+                        Start your coding journey with languages like C, C++, Java, Python or others
+                        (as per institute offerings) to build logic and problem-solving skills.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Advance Excel</h3>
+                    <p>
+                        Master powerful Excel tools such as formulas, functions, charts, pivot tables,
+                        dashboards and data analysis for professional-level productivity.
+                    </p>
+                </article>
+            </div>
+
+            <div class="centered">
+                <a href="registration.html" class="btn secondary-btn">Enroll Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Career Hub Institute of Computer Education. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
