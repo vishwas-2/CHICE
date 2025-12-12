@@ -13,14 +13,21 @@
     <!-- Header & Navigation -->
     <header class="site-header">
         <div class="container nav-container">
-            <a href="index.html" class="logo" role="banner">
+            <a href="index.html" class="logo">
                 <img src="assets/logo.png" alt="CHICE Logo" class="logo-image">
                 <span class="logo-title">CHICE</span>
             </a>
+
+            <div class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="registration.html" class="active">Registration</a></li>
+                    <li><a href="registration.html">Registration</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -45,24 +52,29 @@
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="first_name">First Name <span class="required">*</span></label>
-                        <input type="text" id="first_name" name="first_name" pattern="[A-Za-z]+" placeholder="First Name" required>
+                        <input type="text" id="first_name" name="first_name" pattern="[A-Za-z]+"
+                            placeholder="First Name" required>
                         <small class="error"></small>
                     </div>
                     <div class="form-group">
-                        <label for="last_name">Last Name (If no last name, enter “.”) <span class="required">*</span></label>
+                        <label for="last_name">Last Name (If no last name, enter “.”) <span
+                                class="required">*</span></label>
                         <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                         <small class="error"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="father_first_name">Father's First Name <span class="required">*</span></label>
-                        <input type="text" id="father_first_name" name="father_first_name" pattern="[A-Za-z\s]+" placeholder="First Name" required>
+                        <input type="text" id="father_first_name" name="father_first_name" pattern="[A-Za-z\s]+"
+                            placeholder="First Name" required>
                         <small class="error"></small>
                     </div>
 
                     <div class="form-group">
-                        <label for="father_last_name">Father's Last Name (If no last name, enter “.”) <span class="required">*</span></label>
-                        <input type="text" id="father_last_name" name="father_last_name" placeholder="Last Name" required>
+                        <label for="father_last_name">Father's Last Name (If no last name, enter “.”) <span
+                                class="required">*</span></label>
+                        <input type="text" id="father_last_name" name="father_last_name" placeholder="Last Name"
+                            required>
                         <small class="error"></small>
                     </div>
 
@@ -85,7 +97,8 @@
 
                     <div class="form-group">
                         <label for="mobile">Mobile Number <span class="required">*</span></label>
-                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" placeholder="9999999999" required>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10"
+                            placeholder="9999999999" required>
                         <small class="error"></small>
                     </div>
 
