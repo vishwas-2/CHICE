@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/script.js"></script>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header class="site-header">
         <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-title">Career Hub Institute</span>
-            </div>
+            <a href="index.html" class="logo" role="banner">
+                <img src="assets/logo.png" alt="CHICE Logo" class="logo-image">
+                <span class="logo-title">CHICE</span>
+            </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -37,21 +40,29 @@
             <div id="registration-message" class="form-message"></div>
 
             <!-- Note: Replace the action URL with your actual PHP hosting URL -->
-            <form id="registrationForm"
-                  class="form"
-                  action="https://careerhub.great-site.net/backend/register.php"
-                  method="POST"
-                  novalidate>
+            <form id="registrationForm" class="form" action="https://your-php-host.com/backend/register.php"
+                method="POST" novalidate>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="full_name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="full_name" name="full_name" required>
+                        <label for="first_name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first_name" name="first_name" pattern="[A-Za-z]+" placeholder="First Name" required>
+                        <small class="error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name (If no last name, enter “.”) <span class="required">*</span></label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                         <small class="error"></small>
                     </div>
 
                     <div class="form-group">
-                        <label for="father_name">Father's Name <span class="required">*</span></label>
-                        <input type="text" id="father_name" name="father_name" required>
+                        <label for="father_first_name">Father's First Name <span class="required">*</span></label>
+                        <input type="text" id="father_first_name" name="father_first_name" pattern="[A-Za-z\s]+" placeholder="First Name" required>
+                        <small class="error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="father_last_name">Father's Last Name (If no last name, enter “.”) <span class="required">*</span></label>
+                        <input type="text" id="father_last_name" name="father_last_name" placeholder="Last Name" required>
                         <small class="error"></small>
                     </div>
 
@@ -62,8 +73,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender">
+                        <label for="gender">Gender<span class="required">*</span></label>
+                        <select id="gender" name="gender" required>
                             <option value="">Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -74,20 +85,72 @@
 
                     <div class="form-group">
                         <label for="mobile">Mobile Number <span class="required">*</span></label>
-                        <input type="tel" id="mobile" name="mobile" maxlength="10" required>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" placeholder="9999999999" required>
                         <small class="error"></small>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="xyz@example.com" required>
                         <small class="error"></small>
                     </div>
 
-                    <div class="form-group form-group-full">
-                        <label for="address">Full Address <span class="required">*</span></label>
-                        <textarea id="address" name="address" rows="3" required></textarea>
+                    <div class="form-group">
+                        <label for="address1">Address Line 1 <span class="required">*</span></label>
+                        <input type="text" id="address1" name="address1" required>
                         <small class="error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address Line 2 (optional)</label>
+                        <input type="text" id="address2" name="address2">
+                        <small class="error"></small>
+                    </div>
+                    <div class="form-group-full">
+                        <div class="form-group ">
+                            <label for="city">City/District <span class="required">*</span></label>
+                            <input type="text" id="city" name="city" required>
+                            <small class="error"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State <span class="required">*</span></label>
+                            <select name="state" id="state" required>
+                                <option value="">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha (formerly Orissa)</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                            <small class="error"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode <span class="required">*</span></label>
+                            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" maxlength="6" required>
+                            <small class="error"></small>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -95,7 +158,8 @@
                         <select id="course" name="course" required>
                             <option value="">Select Course</option>
                             <option value="Basic Computer Application">Basic Computer Application</option>
-                            <option value="Basic Computer Application + Tally Prime">Basic Computer Application + Tally Prime</option>
+                            <option value="Basic Computer Application + Tally Prime">Basic Computer Application + Tally
+                                Prime</option>
                             <option value="Diploma in Computer Application">Diploma in Computer Application</option>
                             <option value="Tally Prime">Tally Prime</option>
                             <option value="Programming Languages">Programming Languages</option>
@@ -106,7 +170,8 @@
 
                     <div class="form-group">
                         <label for="qualification">Education / Qualification</label>
-                        <input type="text" id="qualification" name="qualification" placeholder="e.g. 12th Pass, B.Com, etc.">
+                        <input type="text" id="qualification" name="qualification"
+                            placeholder="e.g. 12th Pass, B.Com, etc.">
                         <small class="error"></small>
                     </div>
 
@@ -141,5 +206,5 @@
         </div>
     </footer>
 </body>
-</html>
 
+</html>
